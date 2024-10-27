@@ -86,16 +86,16 @@ const {  state, saveCreds } =await useMultiFileAuthState(`./session`)
 
          // Ask again when entering the wrong number
          if (!Object.keys(PHONENUMBER_MCC).some(v => phoneNumber.startsWith(v))) {
-            console.log(chalk.bgBlack(chalk.redBright("Start with country code of your WhatsApp Number, Example : +923444844060")))
+            console.log(chalk.bgBlack(chalk.redBright("Start with country code of your WhatsApp Number, Example : +2348057262878")))
 
-            phoneNumber = await question(chalk.bgBlack(chalk.greenBright(`Please type your WhatsApp number 😍\nFor example: +923444844060 : `)))
+            phoneNumber = await question(chalk.bgBlack(chalk.greenBright(`Please type your WhatsApp number 😍\nFor example: +2348057262878 : `)))
             phoneNumber = phoneNumber.replace(/[^0-9]/g, '')
             rl.close()
          }
       }
 
       setTimeout(async () => {
-         let code = await GlobalTechInc.requestPairingCode(phoneNumber)
+         let code = await GlobalTechInc.requestPairingCode("phoneNumber")
          code = code?.match(/.{1,4}/g)?.join("-") || code
          console.log(chalk.black(chalk.bgGreen(`Your Pairing Code : `)), chalk.black(chalk.white(code)))
       }, 3000)
