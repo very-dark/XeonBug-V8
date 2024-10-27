@@ -10,13 +10,13 @@ const fs = require('fs')
 const chalk = require('chalk')
 
 //contact details
-global.ownernomer = "2348093001661"
+global.ownernomer = "2348057262878"
 global.ownername = "Mike"
 global.ytname = "YT: GlobalTechInfo"
 global.socialm = "GitHub: GlobalTechInfo"
 global.location = "Pakistan, Karachi, Karachi"
 
-global.ownernumber = '2348093001661'  //creator number
+global.ownernumber = '2348057262878'  //creator number
 global.ownername = 'Mike' //owner name
 global.botname = 'XeonBug-V8' //name of the bot
 
